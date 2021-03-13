@@ -1,29 +1,23 @@
 #include "holberton.h"
 
-int get_format(const char *str, ...)
+void (*get_format(char c))(va_list)
 {
-	va_list args;
 
 	form_t forms[] = {
 		{"c", print_char},
 		{"s", print_str},
-		{NULL, NULL}
 	};
 
 	int i = 0;
 
-	va_start(args, str);
-
-	while (forms[i].form != NULL && _strlen(str) == 1)
+	while (i < 2)
 	{
-		if (str[0] == '%')
+		if (c == forms[i].form[0])
 		{
-			(forms[i].f(args));
+			return (forms[i].f);
 		}
 		i++;
 	}
 
-	va_end(args);
-
-	return (0);
+	return (NULL);
 }

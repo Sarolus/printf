@@ -6,13 +6,13 @@
 typedef struct form
 {
 	char *form;
-	void (*f)();
+	void (*f)(va_list);
 } form_t;
 
 int _putchar(char c);
 int _strlen(const char *s);
 int _printf(const char *format, ...);
-int get_format(const char *str, ...);
+void (*get_format(char c))(va_list);
 void print_char(va_list c);
 void print_str(va_list s);
 
