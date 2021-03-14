@@ -1,11 +1,15 @@
 #include "holberton.h"
 
-void (*get_format(char c))(va_list)
-{
+/**
+ *
+ *
+ */
 
+int (*get_format(char c))(va_list)
+{
 	form_t forms[] = {
 		{"c", print_char},
-		{"s", print_str},
+		{"s", print_str}
 	};
 
 	int i = 0;

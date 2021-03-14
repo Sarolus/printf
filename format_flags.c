@@ -1,11 +1,21 @@
 #include "holberton.h"
 
-void print_char(va_list c)
+/**
+ *
+ *
+ */
+
+int print_char(va_list c)
 {
 	_putchar(va_arg(c, int));
 }
 
-void print_str(va_list s)
+/**
+ *
+ *
+ */
+
+int print_str(va_list s)
 {
 	char *str;
 
