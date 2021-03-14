@@ -6,18 +6,19 @@
  *Return: forms[i].f
  */
 
-void (*get_format(char c))(va_list)
+int (*get_format(char c))(va_list)
 {
 	form_t forms[] = {
 		{"c", print_char},
 		{"s", print_str},
-		{"d", print_value},
-		{"i", print_integer}
+		{"%", print_percent},
+		{"i", print_integer},
+		{"d", print_decimal}
 	};
 
 	int i = 0;
 
-	while (i < 2)
+	while (i < 4)
 	{
 		if (c == forms[i].form[0])
 		{

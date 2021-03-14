@@ -12,16 +12,18 @@
 typedef struct form
 {
 	char *form;
-	void (*f)(va_list);
+	int (*f)(va_list);
 } form_t;
 
 int _putchar(char c);
 int _strlen(const char *s);
 int _printf(const char *format, ...);
-void (*get_format(char c))(va_list);
-void print_char(va_list c);
-void print_str(va_list s);
-void print_value(va_list d);
-void print_integer(va_list i);
+int print_number(va_list args);
+int (*get_format(char c))(va_list);
+int print_char(va_list c);
+int print_str(va_list s);
+int print_percent(va_list p);
+int print_decimal(va_list d);
+int print_integer(va_list i);
 
 #endif /* HOLBERTON_H */

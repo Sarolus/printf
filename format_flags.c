@@ -5,9 +5,10 @@
  *@c: char
  */
 
-void print_char(va_list c)
+int print_char(va_list c)
 {
 	_putchar(va_arg(c, int));
+	return (0);
 }
 
 /**
@@ -15,7 +16,7 @@ void print_char(va_list c)
  *@s: string
  */
 
-void print_str(va_list s)
+int print_str(va_list s)
 {
 	char *str;
 
@@ -31,22 +32,42 @@ void print_str(va_list s)
 		_putchar(*str);
 		str++;
 	}
+	return (0);
+}
+
+/**
+ *
+ *
+ */
+
+int print_percent(va_list p __attribute__((unused)))
+{
+	_putchar('%');
+	return (0);
 }
 
 /**
  *print_value - print value
  *@d: decimal
  */
-void print_value(va_list d)
+
+int print_decimal(va_list d)
 {
-//value de 1 a 10
+	int result;
+	result = print_number(d);
+
+	return (result);
 }
 
 /**
  *print_integer - print an integer
  *@i: integer
  */
-void print_integer(va_list i)
-{
 
+int print_integer(va_list i)
+{
+	int result;
+	result = print_number(i);
+
+	return (result);
 }
