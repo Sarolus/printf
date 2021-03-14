@@ -8,9 +8,9 @@
 
 int _printf(const char *format, ...)
 {
-	void (*f)(va_list);
-	int count = 0;
+	int (*f)(va_list);
 	int i = 0;
+	int count = 0;
 
 	va_list args;
 
@@ -20,28 +20,20 @@ int _printf(const char *format, ...)
 	{
 		if (format[i] == '%')
 		{
-			if (format[i + 1] == '\0')
-				return (-1);
 			i++;
-
-			while (format[i] === ' ')
-				i++;
-
 			f = get_format(format[i]);
 			if (f == NULL)
 			{
 				return (-1);
 			}
-			f(args);
+			count += f(args);
 			i++;
 			continue;
-
 		}
 		_putchar(format[i]);
-		count = count + _putchar(format[i]);
+		count++;
 		i++;
 	}
-
 	va_end(args);
 
 	return (count);

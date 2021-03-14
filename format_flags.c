@@ -7,8 +7,7 @@
 
 int print_char(va_list c)
 {
-	_putchar(va_arg(c, int));
-	return (0);
+	return (_putchar(va_arg(c, int)));
 }
 
 /**
@@ -19,6 +18,7 @@ int print_char(va_list c)
 int print_str(va_list s)
 {
 	char *str;
+	int i = 0;
 
 	str = va_arg(s, char *);
 
@@ -27,12 +27,12 @@ int print_str(va_list s)
 		str = "(null)";
 	}
 
-	while (*str != '\0')
+	while (str[i] != '\0')
 	{
-		_putchar(*str);
-		str++;
+		_putchar(str[i]);
+		i++;
 	}
-	return (0);
+	return (i);
 }
 
 /**
@@ -42,8 +42,7 @@ int print_str(va_list s)
 
 int print_percent(va_list p __attribute__((unused)))
 {
-	_putchar('%');
-	return (0);
+	return (_putchar('%'));
 }
 
 /**
@@ -53,10 +52,7 @@ int print_percent(va_list p __attribute__((unused)))
 
 int print_decimal(va_list d)
 {
-	int result;
-	result = print_number(d);
-
-	return (result);
+	return (print_number(d));;
 }
 
 /**
@@ -66,8 +62,6 @@ int print_decimal(va_list d)
 
 int print_integer(va_list i)
 {
-	int result;
-	result = print_number(i);
 
-	return (result);
+	return (print_number(i));
 }

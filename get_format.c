@@ -1,9 +1,9 @@
 #include "holberton.h"
 
 /**
- *get_format -  azerty
+ *get_format -  Get the adequate function depending of the format.
  *@c: char
- *Return: forms[i].f
+ *Return: Pointer to the specified function
  */
 
 int (*get_format(char c))(va_list)
@@ -18,7 +18,7 @@ int (*get_format(char c))(va_list)
 
 	int i = 0;
 
-	while (i < 4)
+	while (i < 5)
 	{
 		if (c == forms[i].form[0])
 		{
