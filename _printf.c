@@ -9,24 +9,28 @@
 int _printf(const char *format, ...)
 {
 	void (*f)(va_list);
-	int len;
+	int count = 0;
 	int i = 0;
 
 	va_list args;
 
 	va_start(args, format);
 
-	len = _strlen(format);
-
-	while (format[i])
+       	while (format[i])
 	{
 		if (format[i] == '%')
 		{
+			if (format[i + 1] == '\0')
+				return (-1);
 			i++;
+
+			while (format[i] === ' ')
+				i++;
+
 			f = get_format(format[i]);
 			if (f == NULL)
 			{
-				return (0);
+				return (-1);
 			}
 			f(args);
 			i++;
@@ -34,10 +38,11 @@ int _printf(const char *format, ...)
 
 		}
 		_putchar(format[i]);
+		count = count + _putchar(format[i]);
 		i++;
 	}
 
 	va_end(args);
 
-	return (len);
+	return (count);
 }
