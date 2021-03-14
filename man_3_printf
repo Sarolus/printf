@@ -1,0 +1,73 @@
+PRINTF(3)	March 2020	GNU					PRINTF(3)
+
+NAME
+	_printf - formatted output conversion
+
+SYNOPSIS
+	#include "holberton.h"
+
+	int _printf(const char *format, ...);
+	
+	int _putchar(char c);
+	
+	int _strlen(const char *s);
+
+	int print_number(va_list args);
+	
+	int (*get_format(char c))(va_list);
+
+	int print_char(va_list c);
+	
+	int print_str(va_list s);
+
+	int print_percent(va_list p);
+
+	int print_decimal(va_list d);
+	
+	int print_integer(va_list i);
+
+DESCRIPTION
+	The  functions  in the printf() family produce output according to a form at as described below.  The functions printf() write  output  to stdout, the  standard output stream.
+
+       These function write the output under the control of a format string that	sp how subsequent arguments  (or  arguments  accessed  via  the variable-length argument facilities of stdarg(3)) are converted for output
+
+       Return value
+       Upon  successful  return,  these  functions return the number of characters
+       printed (excluding the null byte used to end output to strings).
+
+       If an output error is encountered, a negative value is returned.
+
+
+       The conversion specifier
+
+       %d  	print a decimal number
+       
+       %i	print an integer
+
+       %c	print a character
+
+       %s	print a string
+
+       %u	print an usigned integer
+
+       %r	print a reversed string
+
+       %o	print an octal number
+
+       %b	print a binary number
+       
+       %%	print a percent character
+
+BUGS
+	No bugs to declare.
+
+SEE ALSO
+    printf(3)
+
+AUTHOR
+	Nathan LAPEYRE
+	Simon BRARD
+
+COPYRIGHT
+	Project for Holberton School, Holberton School Haut de France.
+	Royalty Free.
