@@ -1,21 +1,21 @@
 #include "holberton.h"
 
 /**
- *
- *
+ *print_char - print a char
+ *@c: char
  */
 
-int print_char(va_list c)
+void print_char(va_list c)
 {
 	_putchar(va_arg(c, int));
 }
 
 /**
- *
- *
+ *print_str - print a string
+ *@s: string
  */
 
-int print_str(va_list s)
+void print_str(va_list s)
 {
 	char *str;
 
@@ -31,4 +31,22 @@ int print_str(va_list s)
 		_putchar(*str);
 		str++;
 	}
+}
+
+/**
+ *print_value - print value
+ *@d: decimal
+ */
+void print_value(va_list d)
+{
+//value de 1 a 10
+}
+
+/**
+ *print_integer - print an integer
+ *@i: integer
+ */
+void print_integer(va_list i)
+{
+
 }

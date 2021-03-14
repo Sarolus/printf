@@ -1,13 +1,14 @@
 #include "holberton.h"
 
 /**
- *
- *
+ *_printf - function that produces output according to a format
+ *@format: character string
+ *Return: the number of characters printed
  */
 
 int _printf(const char *format, ...)
 {
-	int (*f)(va_list);
+	void (*f)(va_list);
 	int len;
 	int i = 0;
 
