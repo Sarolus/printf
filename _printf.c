@@ -29,6 +29,10 @@ int _printf(const char *format, ...)
 			f = get_format(format[i]);
 			if (f == NULL)
 			{
+				i--;
+				_putchar('%');
+				i++;
+				continue;
 				return (-1);
 			}
 			count += f(args);
