@@ -16,6 +16,7 @@ typedef struct form
 } form_t;
 
 int _putchar(char c);
+int _putstr(char *str);
 int _strlen(const char *s);
 int _printf(const char *format, ...);
 int print_number(va_list args);

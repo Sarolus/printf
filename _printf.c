@@ -23,22 +23,7 @@ int _printf(const char *format, ...)
 
 	while (format[i])
 	{
-		if (format[i] == '%' && format[i + 1] == ' ')
-		{
-			i++;
-			if (format[i + 1] != '\0')
-			{
-				i--;
-				_putchar('%');
-				i++;
-				continue;
-			}
-			else if (format[i + 1] == '\0')
-			{
-				break;
-			}
-		}
-		else if (format[i] == '%')
+		if (format[i] == '%')
 		{
 			i++;
 			f = get_format(format[i]);
@@ -55,6 +40,5 @@ int _printf(const char *format, ...)
 		i++;
 	}
 	va_end(args);
-
 	return (count);
 }
