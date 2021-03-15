@@ -2,7 +2,8 @@
 
 /**
  * print_number - Prints an integer
- * @n: number
+ * @args: Arguments passed
+ * Return: return result.
  */
 
 int print_number(va_list args)
@@ -33,7 +34,7 @@ int print_number(va_list args)
 
 	while (power != 0)
 	{
-		result = _putchar('0' + nb / power);
+		result += _putchar('0' + nb / power);
 		nb %= power;
 		power /= 10;
 	}

@@ -14,7 +14,7 @@ int _putchar(char c)
 
 /**
  * _putstr - Write a string of str[] characters to stdout
- * @: The string to print
+ * @str: The string to print
  *
  * Return: return (null) if null, otherwise return the string.
  */
