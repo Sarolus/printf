@@ -35,3 +35,26 @@ int _putstr(char *str)
 
 	return (i);
 }
+/**
+ *print_rev - print a string in reverse
+ *@s: string
+ *Return: print the string in reverse to stdout
+ */
+int print_rev(char *s)
+{
+	int i, len;
+
+	if (s == NULL)
+	{
+		s = "(null)";
+	}
+	while (s[len] != '\0')
+	{
+		len++;
+	}
+	for (i = len - 1 ; i >= 0 ; i--)
+	{
+		_putchar(s[i]);
+	}
+	return (i);
+}
