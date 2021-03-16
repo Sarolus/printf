@@ -17,7 +17,6 @@ typedef struct form
 
 int _putchar(char c);
 int _putstr(char *str);
-int check_flags(const char *format);
 int _printf(const char *format, ...);
 int print_number(va_list args);
 int (*get_format(char c))(va_list);
