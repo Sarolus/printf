@@ -14,7 +14,7 @@ int _printf(const char *format, ...)
 
 	va_list args;
 
-	if (format == NULL)
+	if (format == NULL || (format[0] == '%' && format[1] == '\0')
 	{
 		return (-1);
 	}
@@ -42,9 +42,12 @@ int _printf(const char *format, ...)
 				continue;
 			}
 		}
-		_putchar(format[i]);
-		count++;
-		i++;
+		else
+		{
+			_putchar(format[i]);
+			count++;
+			i++;
+		}
 	}
 	va_end(args);
 	return (count);
