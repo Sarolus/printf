@@ -24,7 +24,7 @@ int _putstr(char *str)
 
 	if (str == NULL)
 	{
-		return (-1);
+		str = "(null)";
 	}
 
 	while (str[i] != '\0')
@@ -46,7 +46,7 @@ int print_rev(char *s)
 
 	if (s == NULL)
 	{
-		return (-1);
+		s = "(null)";
 	}
 	while (s[len] != '\0')
 	{
