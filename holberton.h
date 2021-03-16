@@ -2,7 +2,7 @@
 #define HOLBERTON_H
 #include <stdarg.h>
 #include <stddef.h>
-
+#include <unistd.h>
 /**
  *struct form - structur
  *@form: pointer
@@ -28,5 +28,7 @@ int print_decimal(va_list d);
 int print_integer(va_list i);
 int print_rev(char *s);
 int print_str_rev(va_list r);
+int print_rot13(va_list R);
+int rot13(char *str);
 
 #endif /* HOLBERTON_H */

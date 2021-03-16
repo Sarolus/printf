@@ -8,3 +8,12 @@ int print_str_rev(va_list r)
 {
 	return (print_rev(va_arg(r, char *)));
 }
+/**
+ *print_rot13 - print a string convert in rot13
+ *@R: string to modif
+ *Return: value of rot13
+ */
+int print_rot13(va_list R)
+{
+	return (rot13(va_arg(R, char *)));
+}

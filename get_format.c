@@ -14,12 +14,13 @@ int (*get_format(char c))(va_list)
 		{"%", print_percent},
 		{"i", print_integer},
 		{"d", print_decimal},
-		{"r", print_str_rev}
+		{"r", print_str_rev},
+		{"R", print_rot13}
 	};
 
 	int i = 0;
 
-	while (i < 6)
+	while (i < 7)
 	{
 		if (c == forms[i].form[0])
 		{
