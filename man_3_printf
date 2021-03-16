@@ -18,6 +18,7 @@ _printf - formatted output conversion
  int print_str_rev(va_list r)
  int print_rot13(va_list R)
  int rot13(char *str)
+ int check_flags(const char *format)
 
 .SH DESCRIPTION
 The  functions  in the printf() family produce output according to a form at as described below.  The functions printf() write  output  to stdout, the  standard output stream.
@@ -38,6 +39,8 @@ print a character
 print a string
 .IP %r
 print a reversed string
+.IP %R
+print a string in rot13
 .IP %%
 print a percent character
 
