@@ -1,4 +1,4 @@
-#include <unistd.h>
+#include "holberton.h"
 
 /**
  * _putchar - writes the character c to stdout
@@ -56,5 +56,5 @@ int print_rev(char *s)
 	{
 		_putchar(s[i]);
 	}
-	return (i);
+	return (len);
 }
