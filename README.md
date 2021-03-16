@@ -9,9 +9,9 @@ It only supports the format you can see below, if you use an unknown format it w
 
 ## Prototype
 
-'''
+```c
 _printf(const char *format, ...);
-'''
+```
 
 ## Supported formats
 
@@ -24,7 +24,7 @@ _printf(const char *format, ...);
 
 ## Usage exmaple
 
-'''
+```c
 _printf("String to be printed.");
 //Output : String to be printed.
 
@@ -39,7 +39,7 @@ _printf("String:[%s].", str);
 int nb = 4;
 _printf("Integer:[%i].", nb);
 //Output : Integer:[4].
-'''
+```
 
 ## How does it work ?
 
