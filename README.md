@@ -5,6 +5,7 @@ This is a reconstitution of the printf function with some of it's known formats.
 ## Description
 
 The **_printf** function prints output of a specified format, it can be a character, a string, integer, etc...<br>
+
 It only supports the format you can see below, if you use an unknown format it will not print. In order to do that, the **_printf** calls specific functions depending of the format. See informations below to know more about the supported formats, the prototype of the function and how it works.
 
 ## Prototype
@@ -43,9 +44,9 @@ _printf("Integer:[%i].", nb);
 
 ## How does it work ?
 
-<p>The **_printf** function will call the **get_format** function that will point on the needed function depending of the format, for example, when you call %c, the **get_format** function will call the **print_char** function in order to print a single character. You can find the specified functions in the format_flags files, the get_format as it's own source file as well as the _printf.<p>
+The **_printf** function will call the **get_format** function that will point on the needed function depending of the format, for example, when you call %c, the **get_format** function will call the **print_char** function in order to print a single character. You can find the specified functions in the format_flags files, the get_format as it's own source file as well as the _printf.<br>
 
-<p>To know more about the **_printf** function, you can read the manual page that we wrote called **man_3_printf**.<p>
+To know more about the **_printf** function, you can read the manual page that we wrote called **man_3_printf**.
 
 ## Authors
 
