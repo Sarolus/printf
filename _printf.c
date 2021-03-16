@@ -21,6 +21,9 @@ int _printf(const char *format, ...)
 
 	va_start(args, format);
 
+	if (check_flags(format) == 0)
+		return (-1);
+
 	while (format[i])
 	{
 		if (format[i] == '%')
@@ -41,4 +44,29 @@ int _printf(const char *format, ...)
 	}
 	va_end(args);
 	return (count);
+}
+/**
+ *
+ *
+ *
+ */
+int check_flags(const char *format)
+{
+	int (*f)(va_list);
+        int i = 0;
+
+	while (format[i])
+        {
+                if (format[i] == '%')
+                {
+                        i++;
+                        f = get_format(format[i]);
+                        if (f == NULL)
+                        {
+                                return (0);
+                        }
+		}
+		i++;
+	}
+	return (1);
 }
