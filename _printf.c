@@ -42,12 +42,9 @@ int _printf(const char *format, ...)
 				continue;
 			}
 		}
-		else
-		{
-			_putchar(format[i]);
-			count++;
-			i++;
-		}
+		_putchar(format[i]);
+		count++;
+		i++;
 	}
 	va_end(args);
 	return (count);
