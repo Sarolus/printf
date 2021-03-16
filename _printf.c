@@ -21,7 +21,7 @@ int _printf(const char *format, ...)
 
 	va_start(args, format);
 
-	if (check_flags(format) == 0)
+	if (check_flags(format) == -1)
 		return (-1);
 
 	while (format[i])
@@ -46,27 +46,27 @@ int _printf(const char *format, ...)
 	return (count);
 }
 /**
- *
- *
- *
+ * check_flags - Quick check of the format.
+ * @format: character string.
+ * Return: return -1 if inadequate format, otherwise return 0.
  */
 int check_flags(const char *format)
 {
 	int (*f)(va_list);
-        int i = 0;
+	int i = 0;
 
 	while (format[i])
-        {
-                if (format[i] == '%')
-                {
-                        i++;
-                        f = get_format(format[i]);
-                        if (f == NULL)
-                        {
-                                return (0);
-                        }
+	{
+		if (format[i] == '%')
+		{
+			i++;
+			f = get_format(format[i]);
+			if (f == NULL)
+			{
+				return (-1);
+			}
 		}
 		i++;
 	}
-	return (1);
+	return (0);
 }
